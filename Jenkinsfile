@@ -12,10 +12,7 @@ pipeline {
 	    steps {
 		echo 'Pulling'
 		sh '''
-		    pm2 stop 3001
-		    cd /home/koh/바탕화면/node-application
-		    git pull
-		    pm2 start 3001
+		    scp application1 koh@10.0.2.15:/home/koh/바탕화면
 		'''
 	    }
 	}
