@@ -12,7 +12,7 @@ pipeline {
 	    steps {
 		echo 'Pulling'
 		sh '''
-		    scp -r -o StrictHostKeyChecking=no application1 koh@10.0.2.15:~/koh
+		    scp -r -o StrictHostKeyChecking=no application1 koh@10.0.2.15:~/koh/바탕화면
 		'''
 	    }
 	}
