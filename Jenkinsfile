@@ -20,9 +20,6 @@ pipeline {
 	stage('NPM Install') {
 	    steps {
 		echo 'Installing'
-#		sh '''
-#		    ssh koh@10.0.2.15 ./application.sh
-#		'''
 	    }
 	}
 	
