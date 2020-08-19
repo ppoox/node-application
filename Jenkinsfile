@@ -21,7 +21,7 @@ pipeline {
 	    steps {
 		echo 'Installing'
 		sh '''
-		    ssh koh@10.0.2.15:~/바탕화면/node-application/application1 \'bash -s\' npm install
+		    ssh koh@10.0.2.15 ./application.sh
 		'''
 	    }
 	}
