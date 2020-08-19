@@ -8,18 +8,21 @@ pipeline {
 	    }
 	}
 
-	stage('Pulling') {
+	stage('Copy') {
 	    steps {
-		echo 'Pulling'
+		echo 'Copying'
 		sh '''
-		    scp -o StrictHostKeyChecking=no -r application1 koh@10.0.2.15:~/바탕화면
+		    scp -o StrictHostKeyChecking=no -r application1 koh@10.0.2.15:~/바탕화면/node-application
 		'''
 	    }
 	}
 
-	stage('Deploy') {
+	stage('NPM Install') {
 	    steps {
-		echo 'Deploying'
+		echo 'Installing'
+		sh '''
+		    ssh koh@10.0.2.15:~/바탕화면/node-application/application1 \'bash -s\' npm install
+		'''
 	    }
 	}
 	
