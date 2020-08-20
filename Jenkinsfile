@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -5,6 +6,8 @@ pipeline {
         stage('Build') {
 	    steps {
 		echo 'Building'
+		def COPY_DIRECTORY_NAME = new Date()
+		echo COPY_DIRECTORY_NAME
 	    }
 	}
 
