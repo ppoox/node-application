@@ -6,6 +6,6 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
 
-const server = app.listen(3001, () => {
-    console.log("Express server has started on port 3001");
+const server = app.listen(process.env.PORT, () => {
+    console.log("Express server has started on port " + process.env.PORT);
 })
