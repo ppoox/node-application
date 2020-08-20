@@ -5,12 +5,12 @@ module.exports = app => {
     });
  
     app.get("/page1", (req, res) => {
-        console.log("Port is 3001 Page1");
-        res.render("page1.html");
+        console.log("page2");
+        res.render("page2.html");
     });
 
     app.get("/page2", (req, res) => {
-        console.log("Port is 3001 Page2");
+        console.log("page2");
         res.render("page2.html");
     });
 }
