@@ -4,7 +4,19 @@ npm install
 
 # getting avaliable port
 a=$(lsof -Pi:3001 -sTCP:LISTEN -t)
+if((x${a} == x))
+then
+    echo '3001 port is not activate'
+    a=0
+fi
+
 b=$(lsof -Pi:3002 -sTCP:LISTEN -t)
+if((x${b} == x))
+then
+    echo '3002 port is not activate'
+    b=0
+fi
+
 after=0
 before=0
 
